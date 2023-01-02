@@ -11,7 +11,7 @@ Roni Kobrosly, PhD
 
 ## Brief Note to SciPy Committee
 
-Thank you for considering this tutorial for SciPy 2023! I presented this last year at SciPy 2022, and judging from the feedback I believe the audience enjoyed it and learned from it. Some notes and feedback I got from the audience [is available here](https://github.com/ronikobrosly/causal_inference_intro/blob/main/admin/scipy2022/post_session_feedback.md). 
+Thank you for considering this tutorial for SciPy 2023! I presented this last year at SciPy 2022, and judging from the feedback I believe the audience enjoyed it and learned from it. Some notes and feedback I got from the audience [are available here](https://github.com/ronikobrosly/causal_inference_intro/blob/main/admin/scipy2022/post_session_feedback.md). 
 
 Since July 2022, I've been fine-tuning the tutorial and examples based on feedback, and I believe the more complex and abstract causality parts of the tutorial are much more clear. I've also done away with running notebooks locally, and now the attendees can run everything in Google Colab. There weren't many environment / setup issues last year, but with the current proposed materials there shouldn't be any issues at all (unless an attendee cannot connect to the internet).  
 
@@ -38,61 +38,68 @@ Tutorial participants are not expected to be familiar with causal inference befo
 
 ## Long Description with Outline
 
-
 * Course Introduction (5 minutes)
-    * Presentation:
-        * Introduce myself and course format
-        * Poll: Poll learners’ comfort level with topic so I can fine-tune pacing and descriptions to match.
-        * Outline goals of training session
+    * Introduce myself and course format
+    * Poll: Poll learners’ comfort level with topic so I can fine-tune pacing and descriptions to match.
+    * Outline goals of training session
 
-* Introducing causal thinking and causal graphs (50 min)
-    * Presentation: 
-        * Define counterfactuals, causal inference, causal inference use cases, causal graphs
-        * The 3 primary types of causal relationships (confounding, colliders, mediators), and selection bias.
-    * Large group exercise: Draw out car insurance causal graph. Attendees will provide answers through the group chat.
-    * Q&A
-    * Exercises: Exploring causal graphs and relationships
+* Two initial examples of causal inference problems (10 minutes):
+    * Hotel bookings and prices
+    * Customers quitting a subscription and receiving a special deal
 
-* Break (10 min)
+* Introducing causal thinking and causal graphs (60 min)
+    * Counterfactuals
+    * Thinking of counterfactuals as a missing data problem.
+    * Experiments and their limitations
+    * The hierarchy of statistical associations, causal inference, and experiments
+    * Causal inference vs typical ML questions
+    * Causal graphs
+        * Explaining the basics
+        * GROUP EXERCISE: Audience helps me build a causal graph by shouting out answers (car insurance example) 
+    * The 3 primary types of causal relationships:
+        * Confounding
+        * Colliding
+        * Mediation
 
-* Assumptions of causal inference (30 min)
-    * Presentation: 
-        * How to get data from causal inference work (A/B tests, pure observational data)
-        * Introduce a few simple suggestions for a causal inference workflow 
-        * Core assumptions of causal inference
-        * Understanding causal inference metrics
-    * Large group exercise: Review sloppy examples of causal inference analyses for which causal assumptions each is violating. Learners will use group chat to share answers
-    * Q&A
+* Notebook 1 exercises: Exploring causal graphs and relationships (20 minutes)
 
-* Basic causal inference modeling with a binary treatment (30 min total)
-    * Presentation: 
-        * Introduce g-computation/s-learning, 
-        * A brief explanation of the algorithm, 
-        * Step-by-step with a simple table in the deck. 
-        * Describe at a high-level what propensity score matching/weighting accomplishes and how it compares with g-computation.
-    * Q&A
-    * Exercises: g-computation method
+* Break (20 min)
 
-* Break (5 min total)
+* Causal thinking continued (20 minutes):
+    * A suggested workflow
+    * Assumptions of causal inference (30 min)
+    * GROUP EXERCISE: I talk through 4 bad examples of causal inference work, and audience shouts out the violated assumptions
+    
 
-* Causal inference modeling with a continuous treatment (30 min total)
-    * Presentation: 
-        * Explaining the problem of handling continuous treatments
-        * How standard, bivariate plots of treatment and effect can fail us
-        * How to conceptualize counterfactuals in the context of continuous treatments
-        * How to interpret the causal curve in words
-    * Q&A
-    * Exercises: Handling continuous treatments by estimating causal curves
-        * This notebook will be used as a starting point, but the population health example will be swapped out and replaced with something more general like product price or wait time in milliseconds for some service)
+* Causal inference analyses (30 minutes):
+    * Metrics:
+        * A reminder about counterfactuals
+        * Walk through all of the flavors of average treatment effect (ATE)
+    * Interrupted Time Series
+    * Regression Discontuity 
+    * Difference in differences
+    * Propensity Score Matching (PSM)
+        * Talk through how PSM looks when using a dataset
+    * G-computation / S-learner
+        * Talk through an example
 
-* Closing remarks (25 min total)
-    * Presentation: 
-        * How to troubleshoot common issues in causal inference analyses. 
-        * Returning to the basic causal inference assumptions we discussed before, with a final warning about them. 
-        * Providing links to other causal ML packages worth exploring (e.g. DoWhy, causalML, etc.)
+* Notebook 2 exercises: G-computation / S-learner exercise (20 minutes)
+
+* Continuous treatments (20 minutes):
+    * Explaining the problem of handling continuous treatments
+    * How standard, bivariate plots of treatment and effect can fail us
+    * How to conceptualize counterfactuals in the context of continuous treatments
+    * How to interpret the causal curve in words
+    
+* Notebook 3 exercises: Causal curve exercise (20 minutes)
+
+* Closing remarks (15 minutes)
+    * How to troubleshoot common issues in causal inference analyses. 
+    * Returning to the basic causal inference assumptions we discussed before, with a final warning about them. 
+    * Providing links to other causal ML packages worth exploring (e.g. DoWhy, causalML, etc.)
     * General Q&A and Wrap Up
 
-__Total time required: 230 minutes__
+__Total time required: 240 minutes__
 
 
 ## Materials and Setup Instructions
