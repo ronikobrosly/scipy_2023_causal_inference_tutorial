@@ -70,7 +70,6 @@ Tutorial participants are not expected to be familiar with causal inference befo
     * Assumptions of causal inference (30 min)
     * GROUP EXERCISE: I talk through 4 bad examples of causal inference work, and audience shouts out the violated assumptions
     
-
 * Causal inference analyses (30 minutes):
     * Metrics:
         * A reminder about counterfactuals
