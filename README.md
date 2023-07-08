@@ -2,8 +2,6 @@
 
 A introduction to causal inference using common tools from the python data stack
 
-July 8th 2023 note: I'm currently fixing a bug with the first colab notebook. Stay tuned for an update!
-
 # Table of Contents
 
 - [Welcome](#welcome)
